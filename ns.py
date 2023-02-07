@@ -128,7 +128,7 @@ def ranCOS(reg, ass, assName, dep, co_lister, ms_lister):
     assName = assName + ".csv"
     with open(assName, "w", newline="") as outfile:
         writer = csv.writer(outfile)
-        writer.writerow(["KGiSL INSTITUTE of Technology"])
+        writer.writerow(["Collage_Name"])
         writer.writerow([f"Assessment Name : {assName}"])
         co1spup=[sum([ms[v] for v in range(len(ms)) if co[v] == 1])]
         co2spup=[sum([ms[v] for v in range(len(ms)) if co[v] == 2])]
