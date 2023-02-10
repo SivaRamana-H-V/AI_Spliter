@@ -188,16 +188,16 @@ def getbtn(btn_func):
         st.write(df) 
         time.sleep(3)
         if file_name is not None:
-            pe.save_book_as(file_name=file_name+".csv", dest_file_name=f"{file_name}.xls")
-            with open(file_name + ".xls", 'rb') as my_file:
+            pe.save_book_as(file_name=file_name+".csv", dest_file_name=f"{file_name}.xlsx")
+            with open(file_name + ".xlsx", 'rb') as my_file:
                 with col9:
-                    st.download_button(label = 'Download', data = my_file, file_name = file_name + '.xls', mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')   
+                    st.download_button(label = 'Download', data = my_file, file_name = file_name + '.xlsx', mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')   
         os.remove(file_name + ".csv")
         st.success("Generated Successfully!")
 
         time.sleep(2)
         try:
-            os.remove(file_name + ".xls")
+            os.remove(file_name + ".xlsx")
         except:
             print("File not found")
 
